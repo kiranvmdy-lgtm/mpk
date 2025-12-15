@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maine Pyar Kiya</title>
+  <style>
+    body {
+      background-color: cornsilk;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      padding: 16px;
+    }
+    h1 { color: rgb(0, 17, 255); margin: 16px 0; }
+    h2 { color: darkmagenta; margin-top: 28px; }
+
+    /* Slideshow */
+    .slideshow {
+      position: relative;
+      max-width: 960px;
+      margin: 16px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      background: #000;
+    }
+    .slides {
+      position: relative;
+      height: 480px;
+    }
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 600ms ease;
+    }
+    .slide.active { opacity: 1; }
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .controls {
+      position: absolute;
+      display: flex;
+      gap: 8px;
+      bottom: 16px;
+      right: 16px;
+    }
+    .btn {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      backdrop-filter: blur(2px);
+    }
+    .btn:hover { background: rgba(255,255,255,0.35); }
+    .dots {
+      position: absolute;
+      display: flex;
+      gap: 6px;
+      bottom: 16px;
+      left: 16px;
+    }
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: rgba(255,255,255,0.4); cursor: pointer;
+    }
+    .dot.active { background: #fff; }
+
+    /* Simple image grid (optional, kept under slideshow) */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      max-width: 960px;
+      margin: 8px auto 24px;
+    }
+    .grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      background: #fff;
+    }
+
+    /* Media embeds */
+    iframe {
+      max-width: 100%;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      margin: 12px 0;
+    }
+
+    a { color: #0645ad; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Maine Pyar Kiya</h1>
+
+  <img src="Maine_Pyar_Kiya_(soundtrack).jpg" alt="Maine Pyar Kiya soundtrack cover" width="360" height="360"/>
+
+  <h2>Cast</h2>
+  <p>
+    Salman Khan as Prem Chaudhary: Suman's love-interest<br>
+    Bhagyashree as Suman: Prem's love-interest<br>
+    Alok Nath as Karan: Suman's father<br>
+    Rajeev Verma as Kishan Kumar Chaudhary: Prem's father<br>
+    Reema Lagoo as Kaushalya Chaudhary: Prem's mother and Kishan's wife<br>
+    Ajit Vachani as Ranjeet<br>
+    Mohnish Bahl as Jeevan: Ranjeet's nephew<br>
+    Laxmikant Berde as Manohar Singh<br>
+    Harish Patel as Rahim<br>
+    Priya Berde as Gulabiya<br>
+    Perveen Dastur as Seema: Ranjeet's daughter<br>
+    Dilip Joshi as Ramlal "Ramu" Singh<br>
+    Deep Dhillon as Lal<br>
+    Raju Shrivastava as Shambhu<br>
+    Shreechand Makhija as Prabhu
+  </p>
+
+  <h2>Movie background and technical team</h2>
+  <p>
+    Directed by: Sooraj Barjatya<br>
+    Written by: Sooraj Barjatya (dialogue)<br>
+    Screenplay by: Sooraj Barjatya<br>
+    Story by: S. M. Ahale<br>
+    Produced by: Tarachand Barjatya<br>
+    Starring: Salman Khan, Bhagyashree<br>
+    Cinematography: Aravind Laad<br>
+    Edited by: Mukhtar Ahmed<br>
+    Music by: Raamlaxman<br>
+    Production company: Rajshri Productions<br>
+    Distributed by: Rajshri Productions<br>
+    Release date: 29 December 1989<br>
+    Running time: 192 minutes<br>
+    Country: India<br>
+    Language: Hindi<br>
+    Budget: ₹1 crore<br>
+    Box office: ₹45 crore
+  </p>
+
+  <h2>Story</h2>
+  <p>
+    Karan, a poor mechanic, leaves his daughter Suman with his wealthy friend Kishan while he works abroad. Suman befriends Kishan’s son Prem; after facing humiliation at a party, they realize they’re in love. Prem’s mother approves, but Kishan—manipulated by Ranjeet—rejects the match. Karan returns, clashes with Kishan, and takes Suman back to their village. Prem follows and accepts Karan’s challenge to prove he can support Suman independently. Despite sabotage by Jeevan, Prem’s determination wins Karan over. In the finale, Prem, Karan, and Kishan unite against Ranjeet and Jeevan, rescue Suman, reconcile, and Suman and Prem marry.
+  </p>
+
+  <h2>Songs</h2>
+  <p>
+    1. "Mere Rang Me Rangne Wali" — Dev Kohli — S. P. Balasubrahmanyam — 6:52<br>
+    2. "Dil Deewana" (Male) — Asad Bhopali — S. P. Balasubrahmanyam — 5:21<br>
+    3. "Dil Deewana" (Duet) — Asad Bhopali — S. P. Balasubrahmanyam, Lata Mangeshkar — 1:16<br>
+    4. "Aate Jaate Hanste Gaate" — Dev Kohli — S. P. Balasubrahmanyam, Lata Mangeshkar — 3:22<br>
+    5. "Kabootar Ja Ja Ja" — Dev Kohli — S. P. Balasubrahmanyam, Lata Mangeshkar — 8:21<br>
+    6. "Aaja Shaam Hone Aayi" — Dev Kohli — S. P. Balasubrahmanyam, Lata Mangeshkar — 5:15<br>
+    7. "Maine Pyar Kiya" — Asad Bhopali — S. P. Balasubrahmanyam, Lata Mangeshkar — 6:49<br>
+    8. "Aaya Mausam Dosti Ka" — Asad Bhopali — S. P. Balasubrahmanyam, Lata Mangeshkar, Usha Mangeshkar, Shailendra Singh — 6:45<br>
+    9. "Antakshari" — Traditional — S. P. Balasubrahmanyam, Lata Mangeshkar, Usha Mangeshkar, Shailendra Singh — 9:07<br>
+    10. "Dil Deewana" (Female) — Asad Bhopali — Lata Mangeshkar — 5:55<br>
+    11. "Kahe Toh Se Sajne" — Asad Bhopali — Sharda Sinha — 5:54<br>
+    Total length: 64:58
+  </p>
+
+  <h1>Click to watch the movie</h1>
+  <h3>YouTube</h3>
+  <p><a href="https://www.youtube.com/watch?v=zmiBoF_NjOU&list=PLzT3wkwRFcO5VzJ07WC4Aw3TOXU7pC4Ak" target="_blank" rel="noopener">Click & Watch N Enjoy</a></p>
+
+  <h3>Prime Video</h3>
+  <p><a href="https://www.primevideo.com/detail/Maine-Pyaar-Kiya/0STAZ5ZTQ7JMFJ66QHI57ACNIW" target="_blank" rel="noopener">Click & Watch N Enjoy</a></p>
+
+  <h2>Click to watch songs</h2>
+  <h3>YouTube</h3>
+  <p><a href="https://www.youtube.com/watch?v=5pgaZnhr8gU&list=RD5pgaZnhr8gU&start_radio=1" target="_blank" rel="noopener">Click & Watch N Enjoy</a></p>
+
+  <h2>Click to listen songs</h2>
+  <h3>JioSaavn</h3>
+  <p><a href="https://www.jiosaavn.com/album/maine-pyar-kiya/6LiVHauINYs_" target="_blank" rel="noopener">Click & Listen N Enjoy</a></p>
+
+  <!-- Gallery Slideshow -->
+  <h2>Gallery</h2>
+  <div class="slideshow" id="slideshow">
+    <div class="slides">
+      <div class="slide active">
+        <img src="MPK 1.jpg" alt="Maine Pyar Kiya still 1">
+      </div>
+      <div class="slide">
+        <img src="MPK 2jpg.jpg" alt="Maine Pyar Kiya still 2">
+      </div>
+      <div class="slide">
+        <img src="MPK 3jpg.jpg" alt="Maine Pyar Kiya still 3">
+      </div>
+      <div class="slide">
+        <img src="MPK 4.jpg" alt="Maine Pyar Kiya still 4">
+      </div>
+      <div class="slide">
+        <img src="MPK 5.jpg" alt="Maine Pyar Kiya still 5">
+      </div>
+      <div class="slide">
+        <img src="MPK 6.jpg" alt="Maine Pyar Kiya still 6">
+      </div>
+      <div class="slide">
+        <img src="MPK 7.jpg" alt="Maine Pyar Kiya still 7">
+      </div>
+      <div class="slide">
+        <img src="MPK 8.jpg" alt="Maine Pyar Kiya still 8">
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn" id="prev">‹ Prev</button>
+      <button class="btn" id="next">Next ›</button>
+    </div>
+
+    <div class="dots" id="dots"></div>
+  </div>
+
+  <!-- Optional: keep a static grid below -->
+  <div class="grid">
+    <img src="MPK 1.jpg" alt="Still 1">
+    <img src="MPK 2jpg.jpg" alt="Still 2">
+    <img src="MPK 3jpg.jpg" alt="Still 3">
+    <img src="MPK 4.jpg" alt="Still 4">
+    <img src="MPK 5.jpg" alt="Still 5">
+    <img src="MPK 6.jpg" alt="Still 6">
+    <img src="MPK 7.jpg" alt="Still 7">
+    <img src="MPK 8.jpg" alt="Still 8">
+  </div>
+
+  <h2>Dubbed in Telugu</h2>
+  <p>
+    <a href="https://www.youtube.com/watch?v=c8L2HKU4_Ds" target="_blank" rel="noopener">
+      <img src="Prema-Paavuraalu-Telugu-1992-20200924103919-500x500.jpg" alt="Prema Paavuraalu Telugu cover" width="400" height="400">
+    </a>
+  </p>
+
+  <!-- Remove empty iframe; keep embeds -->
+  <iframe width="853" height="480" src="https://www.youtube.com/embed/c8L2HKU4_Ds"
+          title="Maine Pyar Kiya HD In Telugu | ప్రేమ పావురాలు | Salman Khan | Bhagyashree | Rajshri Movies"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <iframe width="917" height="516" src="https://www.youtube.com/embed/Fzw49vnGhxU?list=RDFzw49vnGhxU"
+          title="Kabootar Ja Ja Ja - Duet"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <iframe width="853" height="480" src="https://www.youtube.com/embed/hIILoVcAfZw"
+          title="Maine Pyar Kiya Movie Trailer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  <script>
+    // Simple JS slideshow
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const dotsContainer = document.getElementById('dots');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+    let index = 0;
+    let timer;
+
+    // Create dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('span');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+    const dots = Array.from(document.querySelectorAll('.dot'));
+
+    function setActive(i) {
+      slides.forEach(s => s.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      slides[i].classList.add('active');
+      dots[i].classList.add('active');
+    }
+    function goTo(i) {
+      index = (i + slides.length) % slides.length;
+      setActive(index);
+      restart();
+    }
+    function nextSlide() { goTo(index + 1); }
+    function prevSlide() { goTo(index - 1); }
+
+    prev.addEventListener('click', prevSlide);
+    next.addEventListener('click', nextSlide);
+
+    function start() {
+      timer = setInterval(nextSlide, 3000); // change 3000 for different speed
+    }
+    function restart() {
+      clearInterval(timer);
+      start();
+    }
+    start();
+  </script>
+</body>
+</html>
